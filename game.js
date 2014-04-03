@@ -50,7 +50,7 @@ game.things = (function(){
       if(target==="player_inventory"){
         targetObject = game.playerInventory;
       }else{
-        targetobject = game.slide;
+        targetObject = game.slide;
       };
       targetObject[effects.object](itemObject);
     };
@@ -137,7 +137,7 @@ game.slide = (function(){
       bat: false
     };
     var clearInventory = function(){
-      playerInventoryBoxes = document.querySelectorAll('#player_inventory.inventory-box');
+      playerInventoryBoxes = document.querySelectorAll('#player_inventory .inventory-box');
       [].forEach.call(playerInventoryBoxes, function(inventoryBox) {
         inventoryBox.classList.add("empty");
         inventoryBox.innerHTML = "";
